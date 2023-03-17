@@ -12,6 +12,7 @@ for (; n < 58 ; n++)
 	if (n < 57)
 	{
 		putchar(',');
+		putchar(' ');
 	}
 }
 printf("\n");
