@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+/**
+ * main - Get the Last digit of n
+ * Return: 0 (Done)
+ */
+int main(void)
+{
+
+}
