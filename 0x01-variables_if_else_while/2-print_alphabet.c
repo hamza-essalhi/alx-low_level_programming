@@ -5,10 +5,10 @@
  */
 int main(void)
 {
-
-for (char a = 'a'; a <= 'z' ; a++)
+char alphabet[26] = "abcdefghijklmnopqrstuvwxyz";
+for (int a = 0; a < 26 ; a++)
 {
-putchar(a);
+putchar(alphabet[a]);
 }
 return (0);
 }
