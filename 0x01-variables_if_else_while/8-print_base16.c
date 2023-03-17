@@ -15,7 +15,7 @@ for (; n <= 57 ; n++)
 	{
 		for (; a <= f ; a++)
 		{
-			putchar(a)
+			putchar(a);
 		}
 	}
 }
