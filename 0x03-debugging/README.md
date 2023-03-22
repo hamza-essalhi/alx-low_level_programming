@@ -1,4 +1,4 @@
-Q# alx-low_level_programming
+# 0x03-debugging
 
 C is an imperative (procedural) language.
 All the code has to be inside a function.
