@@ -23,7 +23,7 @@ for (i = 1 ; i <= 100; i++)
 	}
 	else if (i == 1)
 	{
-		printf(" %d", i);
+		printf("%d", i);
 	}
 	else
 	{
