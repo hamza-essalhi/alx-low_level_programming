@@ -1,8 +1,5 @@
 #include <stdio.h>
-/**
- * main - print a[2]
- * Return: void
- */
+
 int main(void)
 {
 int n;
