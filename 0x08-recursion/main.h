@@ -1,9 +1,25 @@
 #ifndef MAIN_H
 #define MAIN_H
-/*taks 0*/
+/*task 0*/
 int _putchar(char c);
 void _puts_recursion(char *s);
-/*taks 1*/
 
+/*task 1*/
+void _print_rev_recursion(char *s);
+
+/*task 2*/
+int _strlen_recursion(char *s);
+
+/*task 3*/
+int factorial(int n);
+
+/*task 4*/
+int _pow_recursion(int x, int y);
+
+/*task 5*/
+int _sqrt_recursion(int n);
+
+/*task 6*/
+int is_prime_number(int n);
 
 #endif
