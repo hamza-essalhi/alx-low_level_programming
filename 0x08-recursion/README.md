@@ -1,4 +1,4 @@
-# 0x07-pointers_arrays_strings
+# 0x08-recursion
 
 C is an imperative (procedural) language.
 All the code has to be inside a function.
