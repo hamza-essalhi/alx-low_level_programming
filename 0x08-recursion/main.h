@@ -22,4 +22,10 @@ int _sqrt_recursion(int n);
 /*task 6*/
 int is_prime_number(int n);
 
+/*task 7*/
+int is_palindrome(char *s);
+
+/*task 8*/
+int wildcmp(char *s1, char *s2);
+
 #endif
