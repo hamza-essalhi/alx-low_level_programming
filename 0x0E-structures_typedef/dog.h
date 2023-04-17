@@ -6,7 +6,7 @@
  * @age: A floating-point value representing the dog's age.
  * @owner: A pointer to a character array representing the dog's owner's name.
  *
- * Description: This structure represents the details of a dog, 
+ * Description: This structure represents the details of a dog,
  * with its name, age, and owner's name.
  */
 
