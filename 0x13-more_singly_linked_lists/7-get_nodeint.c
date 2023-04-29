@@ -25,7 +25,7 @@ listint_t *get_nodeint_at_index(listint_t *head,
 		i++;
 	}
 	if (buffer)
-		return buffer;
+		return (buffer);
 	else
-		return NULL;
+		return (NULL);
 }
