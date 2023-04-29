@@ -16,17 +16,17 @@ int pop_listint(listint_t **head)
 	listint_t *buffer;
 	int number;
 
-	if (head || *head)
+	if (!head || !*head)
+	{
+		return (0)
+	}
+	else
 	{
 		number = (*head)->n;
 		buffer = (*head)->next;
 		free(*head);
 		*head = buffer;
 		return (number);
-	}
-	else
-	{
-		return (0);
 	}
 
 
