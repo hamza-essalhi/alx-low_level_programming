@@ -22,12 +22,12 @@ int pop_listint(listint_t **head)
 		buffer = (*head)->next;
 		free(*head);
 		*head = buffer;
+		return (number);
 	}
 	else
 	{
 		return (0);
 	}
-	return (number);
 
 
 }
