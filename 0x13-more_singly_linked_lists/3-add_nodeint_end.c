@@ -31,7 +31,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 		*head = new;
 		return (new);
 	}
-	while(buffer->next)
+	while (buffer->next)
 	{
 		buffer = buffer->next;
 	}
