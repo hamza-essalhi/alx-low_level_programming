@@ -54,6 +54,18 @@ int pop_listint(listint_t **head);
 
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index);
 
+/* t 8 by Hamza Essalhi */
+
+int sum_listint(listint_t *head);
+
+/* t 9 by Hamza Essalhi */
+
+listint_t *insert_nodeint_at_index(listint_t **head,
+	unsigned int id, int n);
+
+/* t 10 by Hamza Essalhi */
+
+int delete_nodeint_at_index(listint_t **head, unsigned int index);
 
 
 #endif
