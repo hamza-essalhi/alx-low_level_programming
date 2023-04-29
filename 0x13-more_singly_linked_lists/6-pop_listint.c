@@ -18,14 +18,15 @@ int pop_listint(listint_t **head)
 
 	if (!head || !*head)
 	{
-		return (0)
+		return (0);
 	}
-
-	number = (*head)->n;
-	buffer = (*head)->next;
-	free(*head);
-	*head = buffer;
-	return (number);
-
+	else
+	{
+		number = (*head)->n;
+		buffer = (*head)->next;
+		free(*head);
+		*head = buffer;
+		return (number);
+	}
 
 }
