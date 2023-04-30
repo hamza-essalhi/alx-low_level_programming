@@ -74,7 +74,7 @@ listint_t *reverse_listint(listint_t **head);
 /* t 12 by hamza essalhi*/
 
 size_t print_listint_safe(const listint_t *head);
-size_t length(const listint_t *head);
+
 
 /* t13 by Hamza Essalhi */
 
