@@ -4,6 +4,7 @@
 size_t length(const listint_t *head);
 size_t print_listint_safe(const listint_t *head);
 
+
 /**
  * length - Counts the number of unique nodes
  * in a looped listint_t linked list.
@@ -15,7 +16,7 @@ size_t print_listint_safe(const listint_t *head);
 size_t length(const listint_t *head)
 {
 	const listint_t *tort, *hre;
-	size_t n = 1;
+	size_t node = 1;
 
 	if (head == NULL || head->next == NULL)
 		return (0);
@@ -30,7 +31,7 @@ size_t length(const listint_t *head)
 			tort = head;
 			while (tort != hre)
 			{
-				n++;
+				node++;
 				tort = tort->next;
 				hre = hre->next;
 			}
@@ -38,11 +39,11 @@ size_t length(const listint_t *head)
 			tort = tort->next;
 			while (tort != hre)
 			{
-				n++;
+				node++;
 				tort = tort->next;
 			}
 
-			return (n);
+			return (node);
 		}
 
 		tort = tort->next;
@@ -62,13 +63,13 @@ size_t length(const listint_t *head)
 
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t n, i = 0;
+	size_t node, i = 0;
 
 	n = length(head);
 
-	if (n != 0)
+	if (node != 0)
 	{
-		for (i = 0; i < n; i++)
+		for (i = 0; i < node; i++)
 		{
 			printf("[%p] %d\n", (void *)head, head->n);
 			head = head->next;
@@ -80,12 +81,12 @@ size_t print_listint_safe(const listint_t *head)
 	else
 	{
 
-		for (; head != NULL; n++)
+		for (; head != NULL; node++)
 		{
 			printf("[%p] %d\n", (void *)head, head->n);
 			head = head->next;
 		}
 	}
 
-	return (n);
+	return (node);
 }
