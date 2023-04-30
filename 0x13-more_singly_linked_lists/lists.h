@@ -67,5 +67,20 @@ listint_t *insert_nodeint_at_index(listint_t **head,
 
 int delete_nodeint_at_index(listint_t **head, unsigned int index);
 
+/* t 11 by Hamza Essalhi*/
 
+listint_t *reverse_listint(listint_t **head);
+
+/* t 12 by hamza essalhi*/
+
+size_t print_listint_safe(const listint_t *head);
+size_t _listint_len(const listint_t *head);
+
+/* t13 by Hamza Essalhi */
+
+size_t free_listint_safe(listint_t **h);
+
+/*t14 by Hamza esslhi */
+
+listint_t *find_listint_loop(listint_t *head);
 #endif
