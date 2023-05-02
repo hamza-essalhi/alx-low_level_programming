@@ -1,23 +1,68 @@
 #include "lists.h"
 #include <stdio.h>
 
-/* Code By Hamza Rssalhi */
-
-size_t get_listint_len(const listint_t *head);
-
-
+size_t looped_listint_len(const listint_t *head);
+size_t print_listint_safe(const listint_t *head);
 
 /**
- * print_listint_safe - Prints a listint_t .
- * @head: A pointer .
+ * looped_listint_len - Counts the number of unique nodes
+ * in a looped listint_t linked list.
+ * @head: A pointer to the head of the listint_t to check.
  *
- * Return: nodest.
+ * Return: If the list is not looped - 0.
+ * Otherwise - the number of unique nodes in the list.
+ */
+size_t looped_listint_len(const listint_t *head)
+{
+	const listint_t *tortoise, *hare;
+	size_t nodes = 1;
+
+	if (head == NULL || head->next == NULL)
+		return (0);
+
+	tortoise = head->next;
+	hare = (head->next)->next;
+
+	while (hare)
+	{
+		if (tortoise == hare)
+		{
+			tortoise = head;
+			while (tortoise != hare)
+			{
+				nodes++;
+				tortoise = tortoise->next;
+				hare = hare->next;
+			}
+
+			tortoise = tortoise->next;
+			while (tortoise != hare)
+			{
+				nodes++;
+				tortoise = tortoise->next;
+			}
+
+			return (nodes);
+		}
+
+		tortoise = tortoise->next;
+		hare = (hare->next)->next;
+	}
+
+	return (0);
+}
+
+/**
+ * print_listint_safe - Prints a listint_t list safely.
+ * @head: A pointer to the head of the listint_t list.
+ *
+ * Return: The number of nodes in the list.
  */
 size_t print_listint_safe(const listint_t *head)
 {
 	size_t nodes, index = 0;
 
-	nodes = get_listint_len(head);
+	nodes = looped_listint_len(head);
 
 	if (nodes == 0)
 	{
@@ -41,56 +86,3 @@ size_t print_listint_safe(const listint_t *head)
 
 	return (nodes);
 }
-
-
-
-
-/**
- * get_listint_len - finds the length of a loop in a linked list
- *
- * @head: a pointer to the head of the linked list
- *
- * Return: the length of the loop, or 0 if there is no loop
- */
-
-
-size_t get_listint_len(const listint_t *head)
-{
-	const listint_t *slow, *fast;
-	size_t nodes = 0;
-
-	if (head == NULL || head->next == NULL)
-		return (0);
-
-	slow = head->next;
-	fast = head->next->next;
-
-	while (fast && fast->next)
-	{
-		if (slow == fast)
-		{
-			slow = head;
-			while (slow != fast)
-			{
-				nodes++;
-				slow = slow->next;
-				fast = fast->next;
-			}
-
-			slow = slow->next;
-			while (slow != fast)
-			{
-				nodes++;
-				slow = slow->next;
-			}
-
-			return (nodes);
-		}
-
-		slow = slow->next;
-		fast = fast->next->next;
-	}
-
-	return (0);
-}
-
