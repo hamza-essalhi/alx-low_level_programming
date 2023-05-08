@@ -8,7 +8,7 @@
  * Return: A pointer to the newly-allocated buffer.
  */
 
-__func char *create_buffer(char *file)
+ char *create_buffer(char *file)
 {
 	char *buffer;
 
@@ -28,7 +28,7 @@ __func char *create_buffer(char *file)
  * @file_desc: The file descriptor to be closed.
  */
 
-__func void close_file(int file_desc)
+void close_file(int file_desc)
 {
 	int c;
 
