@@ -1,5 +1,47 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include "main.h"
+/**
+ * create_buffer - Allocates 1024 bytes for a buffer.
+ * @filename: The name of the file buffer is storing chars for.
+ *
+ * Return: A pointer to the newly-allocated buffer.
+ */
+char *create_temp(char *filename)
+{
+	char *temp;
 
+	temp = malloc(sizeof(char) * 1024);
+
+	if (temp == NULL)
+	{
+		dprintf(STDERR_FILENO,
+			"Error: Can't write to %s\n", filename);
+		exit(100);
+	}
+
+	return (temp);
+}
+
+
+/**
+ * close_file - Closes file.
+ * @filename: The filename to be closed.
+ */
+
+void close_file(int filename)
+{
+	int _close;
+
+	_close = close(filename);
+
+	if (_close == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", filename);
+		exit(100);
+	}
+}
 
 
 /**

@@ -1,4 +1,7 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+
 /**
  * create_buffer - Allocates 1024 bytes for a buffer.
  * @filename: The name of the file buffer is storing chars for.
@@ -15,7 +18,7 @@ char *create_temp(char *filename)
 	{
 		dprintf(STDERR_FILENO,
 			"Error: Can't write to %s\n", filename);
-		exit(100);
+		exit(99);
 	}
 
 	return (temp);
