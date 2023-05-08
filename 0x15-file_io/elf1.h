@@ -1,14 +1,12 @@
 #ifndef ELF1_H
 #define ELF1_H
 #include "main.h"
-
 /**
  * check_elf - Checks if a file is an ELF file.
  * @e_ident: A pointer to an array containing the ELF magic numbers.
  *
  * Description: If the file is not an ELF file - exit code 98.
  */
-
 void check_elf(unsigned char *e_ident)
 {
 	int index;
@@ -35,7 +33,7 @@ void print_magic(unsigned char *e_ident)
 {
 	int index;
 
-	printf("  Magic:   ");
+	printf(" Magic: ");
 
 	for (index = 0; index < EI_NIDENT; index++)
 	{
@@ -52,10 +50,9 @@ void print_magic(unsigned char *e_ident)
  * print_class - Prints the class of an ELF header.
  * @e_ident: A pointer to an array containing the ELF class.
  */
-
 void print_class(unsigned char *e_ident)
 {
-	printf("  Class:                             ");
+	printf(" Class: ");
 
 	switch (e_ident[EI_CLASS])
 	{
