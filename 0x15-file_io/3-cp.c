@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- * create_buffer - Allocates 1024 bytes for a buffer.
+ * create_temp - Allocates 1024 bytes for a buffer.
  * @filename: The name of the file buffer is storing chars for.
  *
  * Return: A pointer to the newly-allocated buffer.
@@ -93,13 +93,10 @@ int main(int argc, char *argv[])
 
 		r = read(file_from, buf, 1024);
 		file_to = open(argv[2], O_WRONLY | O_APPEND);
-
 	}
-
 	free(buf);
 	close(file_from);
 	close(file_to);
-
 	return (0);
 }
 
