@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
+
 /**
  * create_temp - Allocates 1024 bytes for a buffer.
  * @filename: The name of the file buffer is storing chars for.
