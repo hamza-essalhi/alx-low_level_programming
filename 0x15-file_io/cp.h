@@ -40,4 +40,17 @@ void close_file(int file_desc)
 		exit(100);
 	}
 }
+/**
+ * slen - string length
+ * @s: string
+ * Return: length
+ */
+int slen(char *s)
+{
+	if (!*s)
+		return (0);
+	s++;
+	return (1 + slen(s));
+}
+
 #endif

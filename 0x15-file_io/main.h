@@ -10,6 +10,8 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
+#include <elf.h>
+#define __silent __attribute__((unused))
 
 
 ssize_t read_textfile(const char *filename, size_t letters);
